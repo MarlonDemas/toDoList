@@ -6,6 +6,6 @@
 
     // Checking if there is a connection
     if (mysqli_connect_errno()) {
-        echo "Connection Unsuccessful: " . mysqli_connect_errno();
-    }
+        echo "Connection Unsuccessful: " . mysqli_connect_error();
+    } 
 ?>
