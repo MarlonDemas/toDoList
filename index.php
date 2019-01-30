@@ -1,18 +1,18 @@
 <?php
     include_once("connect.php");
 
-    $sql = "CREATE TABLE list(
+    $sql = "CREATE TABLE IF NOT EXISTS list(
             ListID INT NOT NULL,
             ListText VARCHAR(128) NOT NULL,
             ListItemDone INT(1) NOT NULL,
             ListItemID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY)";
     
-    $table = mysqli_query($conn, $sql);
+    $table = mysqli_query($db_server, $sql);
 
     if ($table) {
         echo "Table was successfully created.";
     } else {
-        echo "Failed to create table: " . mysqli_error($conn);
+        echo "Failed to create table: " . mysqli_error($db_server);
     }
 ?>
 
