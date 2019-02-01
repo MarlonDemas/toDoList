@@ -1,7 +1,7 @@
 <?php
     include_once("connect.php");
 
-    $sql = "CREATE TABLE IF NOT EXISTS list(
+    $sql = "CREATE TABLE IF NOT EXISTS list_items(
             ListID INT NOT NULL,
             ListText VARCHAR(128) NOT NULL,
             ListItemDone INT(1) NOT NULL,
