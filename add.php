@@ -7,11 +7,8 @@
                             (2, 'Do some research on what you would like the project to look like', 1),
                             (4, 'Have some lunch', 1)");
 
+    if($add === TRUE) {
+        echo 'Table successfully created. You can now <a href="disp.php">display</a> the data in a table.';
+    }
     
-
-    $todo_res = $db_server->query("SELECT * FROM list_items ORDER BY ListItemID DESC");
-
-    while($row = $todo_res->fetch_assoc()) {
-        echo "<br>" .$row['ListText']. "<br>";
-    };
 ?>
