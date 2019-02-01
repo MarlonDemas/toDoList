@@ -37,7 +37,7 @@
         </table>
 
         <?php
-            mysqli_close($db_server);
+            $db_server->close();
         ?>
 
         <a href="index.php" class="button is-primary">Home</a>
